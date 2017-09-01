@@ -1,0 +1,26 @@
+{
+  "name": "part-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon app",
+    "db": "dropdb hotel_db; createdb hotel_db; psql hotel_db < ./schema.sql; psql hotel_db < ./load-data.sql",
+    "drop": "dropdb hotel_db",
+    "create": "createdb hotel_db",
+    "schema": "psql hotel_db < ./schema.sql",
+    "seed": "psql hotel_db < ./load-data.sql"
+  },
+  "author": "Wayne Banks",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chai": "^4.1.2",
+    "express": "^4.15.4",
+    "pg-promise": "^6.5.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  }
+}
